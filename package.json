@@ -1,0 +1,33 @@
+{
+  "name": "trillo",
+  "version": "1.0.0",
+  "description": "Building a travel agency website using Flexbox",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "node-sass sass/main.scss css/main.css -w",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/main.css -o css/main.prefix.css",
+    "compress:css": "node-sass css/main.prefix.css css/main.css --output-style compressed",
+    "build:css": "npm-run-all prefix:css compress:css",
+    "dev": "live-server",
+    "start": "npm-run-all --parallel dev sass:watch compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stizzle123/trillo.git"
+  },
+  "keywords": [],
+  "author": "Arifayan Idowu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stizzle123/trillo/issues"
+  },
+  "homepage": "https://github.com/stizzle123/trillo#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.4.6",
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.1"
+  }
+}
