@@ -1,4 +1,4 @@
-$color-primary: #e8199c; // darkpink
+$color-primary: #f13463;
 $color-primary-light: #ff3366;
 $color-primary-dark: #ba265d;
 $color-white: #ffffff;
@@ -7,7 +7,8 @@ $grey: (
   default-1: #ccc,
   default-2: rgb(167, 164, 164),
   primary: #f4f2f2,
-  secondary: #ece4e4,
+  primary-light: #faf9f9,
+  secondary: #dfd7d7,
   light: #f1eeee,
   dark: #333,
   dark-primary: #777,
@@ -15,5 +16,8 @@ $grey: (
 );
 
 $shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow2: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
 $font-family: "Dosis", sans-serif;
+
+$border-bottom: 1px solid map-get($grey, secondary);

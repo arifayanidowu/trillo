@@ -12,7 +12,8 @@ html {
 }
 body {
   font-family: $font-family;
+  color: map-get($grey, dark);
   font-weight: 400;
   line-height: 1.6;
-  background-color: map-get($grey, light);
+  // background-color: map-get($grey, light);
 }
