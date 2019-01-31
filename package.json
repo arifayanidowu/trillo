@@ -4,12 +4,12 @@
   "description": "Building a travel agency website using Flexbox",
   "main": "index.js",
   "scripts": {
-    "sass:watch": "node-sass sass/main.scss css/main.css -w",
+    "sass:watch": "node-sass scss/main.scss css/main.css -w",
+    "dev": "live-server",
+    "start": "npm-run-all --parallel dev sass:watch",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/main.css -o css/main.prefix.css",
     "compress:css": "node-sass css/main.prefix.css css/main.css --output-style compressed",
-    "build:css": "npm-run-all prefix:css compress:css",
-    "dev": "live-server",
-    "start": "npm-run-all --parallel dev sass:watch compress:css"
+    "build:css": "npm-run-all prefix:css compress:css"
   },
   "repository": {
     "type": "git",

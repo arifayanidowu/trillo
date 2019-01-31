@@ -1,15 +1,19 @@
 $color-primary: #e8199c; // darkpink
 $color-primary-light: #ff3366;
 $color-primary-dark: #ba265d;
+$color-white: #ffffff;
 
 $grey: (
-  default: #ccc,
+  default-1: #ccc,
+  default-2: rgb(167, 164, 164),
   primary: #f4f2f2,
-  secondary: #faf9f9,
-  light: #f0eeee,
+  secondary: #ece4e4,
+  light: #f1eeee,
   dark: #333,
   dark-primary: #777,
   dark-default: #999
 );
+
+$shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 
 $font-family: "Dosis", sans-serif;

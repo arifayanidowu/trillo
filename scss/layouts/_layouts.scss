@@ -1,0 +1,27 @@
+.container {
+  max-width: 100%;
+}
+
+.header {
+  height: 7rem;
+  font-size: 1.4rem;
+  background-color: $color-white;
+  border-bottom: 1px solid map-get($grey, default-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: map-get($grey, dark);
+  flex: 0 0 18%;
+}
+
+.hotel-view {
+  background-color: $color-white;
+  flex: 1;
+}

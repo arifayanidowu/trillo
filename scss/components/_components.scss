@@ -1,0 +1,113 @@
+.logo {
+  height: 3.25rem;
+  margin-left: 3rem;
+}
+
+.search {
+  flex: 0 0 40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: map-get($grey, light);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    margin-right: -3.25rem;
+    transition: all 0.3s ease;
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: map-get($grey, secondary);
+    }
+
+    &::-webkit-input-placeholder {
+      color: map-get($grey, default-2);
+      font-weight: 100;
+      font-size: inherit;
+    }
+    &::placeholder {
+      color: map-get($grey, default-2);
+      font-weight: 100;
+      font-size: inherit;
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: map-get($grey, secondary);
+  }
+
+  &__button {
+    border: none;
+    background-color: map-get($grey, light);
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.user-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+  }
+
+  & > *:hover {
+    background-color: map-get($grey, light);
+  }
+  &__icon-box {
+  }
+
+  &__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    color: map-get($grey, dark-primary);
+  }
+
+  &__notification {
+    font-size: 0.8rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  &__user {
+    &-photo {
+      height: 3.5rem;
+      border-radius: 50%;
+    }
+
+    &-name {
+    }
+  }
+}
+
+svg.icon {
+  color: map-get($grey, dark-primary);
+}
