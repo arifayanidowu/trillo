@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
-    <title>Trillo &mdash; Your awesome travel agency</title>
+    <title>Trillo &mdash; Your one stop hotel and relaxation spot</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
         crossorigin="anonymous">
@@ -15,7 +15,7 @@
             <img src="img/logo.png" alt="trillo logo" class="logo">
 
             <form action="#" class="search">
-                <input type="text" class="search__input" placeholder="search hotels">
+                <input type="text" class="search__input" placeholder="search hotels...">
                     <button class="search__button">
                         <i class="fas fa-search icon"></i>
                     </button>
@@ -140,7 +140,49 @@
                     </div>
 
                     <div class="user-reviews">
-                        User review
+                        <figure class="review">
+                            <blockquote class="review__text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, labore?
+                            </blockquote>
+                            <figcaption class="review__user">
+                                <img src="img/user-1.jpg" alt="User 1" class="review__photo">
+                                <div class="review__user-box">
+                                    <p class="review__user-name">Jude Kemp</p>
+                                    <p class="review__user-date">Dec 14th, 2018</p>
+                                </div>
+                                <div class="review__rating">7.8</div>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="review">
+                            <blockquote class="review__text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, accusantium!
+                            </blockquote>
+                            <figcaption class="review__user">
+                                <img src="img/user-2.jpg" alt="User 2" class="review__photo">
+                                <div class="review__user-box">
+                                    <p class="review__user-name">Mary Sanders</p>
+                                    <p class="review__user-date">Jan 11th, 2019</p>
+                                </div>
+                                <div class="review__rating">9.2</div>
+                            </figcaption>
+                        </figure>
+                        <button class="btn-inline">Show all <i class="fas fa-chevron-right ml-2"></i></button>
+                    </div>
+                </div>
+
+                <div class="cta">
+                    <h2 class="cta__book-now">
+                        Good news! We have four free rooms for your selected dates.
+                    </h2>
+
+                    <button class="btn">
+                        <span class="btn__visible">Book Now</span>
+                        <span class="btn__invisible">Only 4 rooms left</span>
+                    </button>
+
+                    <div class="cta__copyright">
+                        &copy; <span id="date2"></span> by trillo. All rights reserved.
                     </div>
                 </div>
             </main>
@@ -149,8 +191,10 @@
 
     <script>
         let date = document.querySelector('#date');
+        let date2 = document.querySelector('#date2');
 
         date.innerText = new Date().getFullYear();
+        date2.innerText = new Date().getFullYear();
     </script>
   </body>
 </html>

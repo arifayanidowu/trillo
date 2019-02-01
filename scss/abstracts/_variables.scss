@@ -1,4 +1,4 @@
-$color-primary: #f13463;
+$color-primary: #f32c5e;
 $color-primary-light: #ff3366;
 $color-primary-dark: #ba265d;
 $color-white: #ffffff;
@@ -21,3 +21,9 @@ $shadow2: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 $font-family: "Dosis", sans-serif;
 
 $border-bottom: 1px solid map-get($grey, secondary);
+
+$breakpoint: (
+  largest: 75em,
+  tablet: 56.25em,
+  mobile: 41.88em
+);
