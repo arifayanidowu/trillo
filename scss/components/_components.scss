@@ -176,6 +176,9 @@
     transform: scaleY(0);
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
       background-color 0.1s;
+    @include responsiv(map-get($breakpoint, tablet)) {
+      height: 100%;
+    }
   }
 
   &__item:hover::before,
@@ -203,6 +206,7 @@
     @include responsiv(map-get($breakpoint, tablet)) {
       justify-content: center;
       padding: 2rem;
+      height: 100%;
     }
 
     @include responsiv(map-get($breakpoint, mobile)) {
@@ -240,9 +244,104 @@ svg.icon {
 
 .gallery {
   display: flex;
+  &__item {
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__icon {
+    color: lighten($color-primary-light, 10%);
+    font-size: 2.6rem;
+    transform: rotate(15deg);
+    @include responsiv(map-get($breakpoint, mobile)) {
+      font-size: 1.6rem;
+    }
+  }
   &__photo {
     width: 100%;
     display: block;
+    @include responsiv(map-get($breakpoint, tablet)) {
+      width: 100%;
+    }
+    transition: all 0.3s ease-out;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: map-get($grey, primary);
+    z-index: 10;
+    text-align: center;
+    // padding-top: 50px;
+    background-color: rgba(225, 225, 225, 0.25);
+    transform: translateY(100%);
+    transition: all 0.3s cubic-bezier(0.04, 0.96, 0.55, 1);
+
+    & h3 {
+      margin-top: 40px;
+      @include responsiv(map-get($breakpoint, mobile)) {
+        margin-top: 2px;
+      }
+    }
+    @include responsiv(map-get($breakpoint, tablet)) {
+      font-size: 1.3rem;
+      padding-top: 15px;
+    }
+  }
+
+  &__item:hover &__caption {
+    top: 0;
+    transform: translateY(0);
+  }
+  &__item:hover &__photo {
+    transform: scale(1.1);
+    filter: blur(1px);
+    @supports (-webkit-filter: blur()) and (filter: blur()) {
+      -webkit-filter: blur(1px);
+      filter: blur(1px);
+    }
+  }
+}
+
+.btn-caption {
+  color: $color-white;
+  font-family: inherit;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary
+  );
+  border: none;
+  border-radius: 100px;
+  padding: 1.2rem 3.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 5px;
+  &:active {
+    outline: none;
+    transform: translateY(5px);
+  }
+  @include responsiv(map-get($breakpoint, tablet)) {
+    margin-top: 2px;
+    font-size: 1.2rem;
+    padding: 0.8rem 3rem;
   }
 }
 

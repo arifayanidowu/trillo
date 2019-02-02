@@ -76,13 +76,30 @@
             <main class="hotel-view">
                 <div class="gallery">
                     <figure class="gallery__item">
-                        <img src="img/hotel-1.jpg" alt="Gallery Img 1" class="gallery__photo">
+                        <img sizes="(max-width: 900px) 768px, 600px" srcset="img/hotel-1-small.jpg 432w,img/hotel-1.jpg 1500w"
+                        src="img/hotel-1.jpg" 
+                        alt="Gallery Img 1" 
+                        class="gallery__photo">
+                        <figcaption class="gallery__caption">
+                            <h3>Date Night specials <i class="fas fa-glass-cheers gallery__icon"></i></h3>
+                            <button class="btn-caption">Read more</button>
+                        </figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="img/hotel-2.jpg" alt="Gallery Img 2" class="gallery__photo">
+                        <img sizes="(max-width: 900px) 768px, 600px" srcset="img/hotel-2-small.jpg 432w,img/hotel-2.jpg 1500w" src="img/hotel-2.jpg"
+                            alt="Gallery Img 2" class="gallery__photo">
+                            <figcaption class="gallery__caption">
+                                <h3>Pool side spa <i class="fas fa-cocktail gallery__icon"></i></h3>
+                                <button class="btn-caption">Read more</button>
+                            </figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="img/hotel-3.jpg" alt="Gallery Img 3" class="gallery__photo">
+                        <img sizes="(max-width: 900px) 768px, 600px" srcset="img/hotel-3-small.jpg 432w,img/hotel-3.jpg 1500w" src="img/hotel-3.jpg"
+                            alt="Gallery Img 1" class="gallery__photo">
+                            <figcaption class="gallery__caption">
+                                <h3>Fantastic view <i class="fas fa-wine-bottle gallery__icon"></i></h3>
+                                <button class="btn-caption">Read more</button>
+                            </figcaption>
                     </figure>
                 </div>
 
